@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Análise de Dados - Carros Clássicos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align:justify;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        #img6 { 
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Relatório de Análise de Dados - Classic Cars Dataset</h1>
+
+    <div class="container">
+
+        <div class="section">
+            <h2> Integrantes do Grupo: </h2>
+            <p> Guilherme Doretto Sobreiro (RM: 99674) </p>
+            <p> Guilherme Fazito Ziolli    (RM: 550539) </p>
+            <p> Raí Gumieri dos Santos     (RM: 98287) </p>
+        </div>
+        
+        <div class="section">
+            <h2>Estatísticas Descritivas</h2>
+            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Miles_per_Gallon</th>
+      <th>Cylinders</th>
+      <th>Displacement</th>
+      <th>Horsepower</th>
+      <th>Weight_in_lbs</th>
+      <th>Acceleration</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>398.000000</td>
+      <td>406.000000</td>
+      <td>406.000000</td>
+      <td>400.000000</td>
+      <td>406.000000</td>
+      <td>406.000000</td>
+      <td>406</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>23.514573</td>
+      <td>5.475369</td>
+      <td>194.779557</td>
+      <td>105.082500</td>
+      <td>2979.413793</td>
+      <td>15.519704</td>
+      <td>1975-12-30 13:49:57.044334976</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>9.000000</td>
+      <td>3.000000</td>
+      <td>68.000000</td>
+      <td>46.000000</td>
+      <td>1613.000000</td>
+      <td>8.000000</td>
+      <td>1970-01-01 00:00:00</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>17.500000</td>
+      <td>4.000000</td>
+      <td>105.000000</td>
+      <td>75.750000</td>
+      <td>2226.500000</td>
+      <td>13.700000</td>
+      <td>1973-01-01 00:00:00</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>23.000000</td>
+      <td>4.000000</td>
+      <td>151.000000</td>
+      <td>95.000000</td>
+      <td>2822.500000</td>
+      <td>15.500000</td>
+      <td>1976-01-01 00:00:00</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>29.000000</td>
+      <td>8.000000</td>
+      <td>302.000000</td>
+      <td>130.000000</td>
+      <td>3618.250000</td>
+      <td>17.175000</td>
+      <td>1979-01-01 00:00:00</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>46.600000</td>
+      <td>8.000000</td>
+      <td>455.000000</td>
+      <td>230.000000</td>
+      <td>5140.000000</td>
+      <td>24.800000</td>
+      <td>1982-01-01 00:00:00</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>7.815984</td>
+      <td>1.712160</td>
+      <td>104.922458</td>
+      <td>38.768779</td>
+      <td>847.004328</td>
+      <td>2.803359</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+            <p>As estatísticas descritivas fornecem uma visão geral dos principais valores numéricos do dataset de carros, como a média, o desvio padrão, os valores mínimo e máximo, e os quartis.</p>
+        </div>
+
+        <div class="section"> 
+            <h2>Gráfico de Dispersão: Potência vs Milhagem</h2>
+            <iframe src="dispersao_potencia_milhagem_hvplot.html" width="100%" height="600" style="border:none;"></iframe>
+            <p>O gráfico revela uma tendência negativa clara entre a potência dos veículos e sua milhagem, indicando que, à medida que a potência aumenta, a eficiência de combustível geralmente diminui. Nos Estados Unidos, os carros tendem a ter potências mais elevadas e milhagens mais baixas, refletindo uma preferência por veículos potentes em detrimento da eficiência. Em contraste, os carros japoneses demonstram uma distribuição mais ampla de potências, com muitos exibindo milhagens superiores, enfatizando a eficiência de combustível. Os veículos europeus seguem um padrão semelhante, apresentando boa eficiência independentemente da potência. Assim, embora haja exceções, a relação entre potência e eficiência de combustível parece ser uma regra geral entre os diferentes países de origem.</p>
+        </div>
+
+        <div class="section"> 
+            <h2>Gráfico de Dispersão: Carros por Região</h2>
+            <img src="distribuicao_origem.png" alt="Gráfico de Dispersão - Carros por Região"/>
+            <p>O gráfico revela que a maioria dos carros no conjunto de dados é dos EUA, com 254 veículos, demonstrando uma diferença significativa em relação à Europa e ao Japão. As duas últimas regiões possuem números similares de veículos, com 73 carros da Europa e 79 do Japão, indicando uma participação equilibrada entre elas.</p>
+        </div>
+
+        <div class="section"> 
+            <h2>Gráfico de Linha: Evolução de Milhagem entre 1970 - 1982</h2>
+            <img src="milhagem_ano.png" alt="Gráfico de Linha - Milhagem entre 1970 - 1982"/>
+            <p> O gráfico mostra a variação da eficiência de combustível, medida em milhas por galão, entre 1970 e 1982. Começa em 17,5 milhas por galão em 1970, com flutuações até 1976, quando a eficiência aumenta consistentemente, atingindo o ápice em 1980 com cerca de 32,5 milhas por galão. Depois, há uma leve queda em 1982. Isso ilustra uma tendência de melhoria na eficiência de combustível ao longo do tempo, possivelmente devido a avanços tecnológicos e regulamentações ambientais. </p>
+        </div>
+
+        <div class="section"> 
+            <h2>Gráfico de Dispersão: Relação entre Peso e Milhagem</h2>
+            <iframe src="grafico_hvplot.html" width="100%" height="600" style="border:none;"></iframe>
+            <p> O gráfico mostra a relação entre o peso de veículos (em libras) e a milhagem (milhas por galão) de acordo com a origem dos veículos (EUA, Europa e Japão). Veículos mais leves tendem a ter uma maior eficiência de combustível, enquanto veículos mais pesados apresentam menor eficiência. Além disso, veículos de origem japonesa e europeia geralmente são mais eficientes em termos de combustível em comparação com os veículos dos EUA, especialmente na faixa de peso mais leve. Este gráfico é relevante para entender como o peso do veículo influencia diretamente no consumo de combustível, o que pode ser útil para consumidores e fabricantes na tomada de decisões sobre design e compra de veículos. </p>
+        </div>
+
+        <div class="section"> 
+            <h2>Gráfico de Dispersão: Relação entre Potência e Aceleração</h2>
+            <iframe src="grafico_scatter_hvplot.html" width="100%" height="600" style="border:none;"></iframe>
+            <p> O gráfico mostra a relação entre potência (Horsepower) e aceleração (Acceleration) de veículos, categorizados pela origem (USA, Europe, Japan). De maneira geral, veículos com maior potência tendem a ter menor aceleração, indicando que veículos mais potentes aceleram mais rapidamente. A maioria dos veículos dos EUA (representados por pontos azuis) possui uma ampla gama de potências, enquanto os veículos europeus (pontos laranja) e japoneses (pontos verdes) tendem a se concentrar em faixas de potência mais baixas.  </p>
+        </div>
+
+        <div class="section">
+            <h2>Gráfico de Calor: Média de Miles_Gallon por Origin e Cylinders</h2>
+            <img id=img6 src="graficocalor.png" alt="Gráfico de Calor - Miles_Gallon por Origin e Cylinders"/>
+            <p> O gráfico mostra a média de milhas por galão (MPG) de veículos com diferentes números de cilindros (3, 4, 5, 6 e 8) e origens (Europa, Japão e EUA). Observa-se que veículos japoneses com 4 cilindros têm a maior média de MPG (32), enquanto veículos americanos com 8 cilindros têm a menor média de MPG (15). Veículos europeus e americanos com 3 cilindros têm a mesma média de MPG (28). Este gráfico é relevante porque ilustra como a eficiência de combustível varia significativamente com o número de cilindros e a origem do veículo. </p>
+        </div>
+    </div>
+</body>
+</html>
